@@ -5,6 +5,7 @@ import SessionProvider from "@/components/SessionProvider";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import Login from "@/components/Login";
+import ClientProvider from "@/components/ClientProvider";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,7 +35,7 @@ export default async function RootLayout({
             <Sidebar />
           </div>
 
-          {/* client provider */}
+          <ClientProvider />
 
           <div className="bg-[#343541] flex-1">{children}</div>
         </div>
